@@ -212,4 +212,43 @@ displaySum(4, 6); // Prints "The sum is: 10"
 - **Readability**: Makes your code cleaner and easier to understand. Imagine reading a book with clear chapters—that’s what functions do for your code!
 - **Modularity**: You can mix and match functions to build bigger, more complex applications.
 
----
+## Global and Local Variables in JavaScript 🔐🌍
+
+Imagine you have two types of containers for your stuff:
+
+- **Global variables** are like leaving your things on the kitchen table—anyone in the house can see and use them.
+- **Local variables** are like keeping your stuff in your bedroom—only you (or people in your room) can access them.
+
+### Global Variables
+
+A **global variable** is accessible from anywhere in your code.
+
+```javascript
+let globalVar = "I am global!";
+
+function showGlobal() {
+  console.log(globalVar); // Can access globalVar
+}
+
+showGlobal(); // Prints "I am global!"
+console.log(globalVar); // Also works here
+```
+
+### Local Variables
+
+A **local variable** is only accessible inside the function where it’s declared.
+
+```javascript
+function showLocal() {
+  let localVar = "I am local!";
+  console.log(localVar); // Works fine here
+}
+
+showLocal(); // Prints "I am local!"
+console.log(localVar); // Error! localVar is not defined here
+```
+
+### Why Does This Matter?
+
+- **Global variables** are handy, but too many can clutter your code and cause bugs (like leaving stuff all over the house).
+- **Local variables** keep things neat and organized, making your code easier to manage.
