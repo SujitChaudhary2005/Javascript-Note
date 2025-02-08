@@ -253,7 +253,48 @@ console.log(localVar); // Error! localVar is not defined here
 - **Global variables** are handy, but too many can clutter your code and cause bugs (like leaving stuff all over the house).
 - **Local variables** keep things neat and organized, making your code easier to manage.
 
-## Arrays in JavaScript 📋
+## Data Types in JavaScript 🎯
+
+In JavaScript, **data types** define the kind of values that can be stored and manipulated in a program. Think of them as different types of containers for different kinds of stuff!
+
+## **1. Numbers 🔢**
+
+Numbers in JavaScript can be **integers** or **decimals**.
+
+```javascript
+let age = 25;       // Integer
+let price = 99.99;  // Decimal
+```
+
+- Used for **calculations** (math operations).
+- No separate types for integers and decimals—**all are "number" type**.
+
+## **2. Strings 📝**
+
+A **string** is just text inside quotes.
+
+```javascript
+let name = "John";
+let greeting = 'Hello, World!';
+let message = `Welcome, ${name}!`; // Template literals (backticks)
+```
+
+- Used for **displaying text**, **user input**, and **messages**.
+- Can be written in **single (`'`)**, **double (`"`)**, or **backticks (` `` `)**.
+
+## **3. Booleans ✅❌**
+
+A **Boolean** can only have two values: `true` or `false`.
+
+```javascript
+let isLoggedIn = true;
+let hasPermission = false;
+```
+
+- Used in **conditions** (`if` statements).
+- Helps make **decisions** in the code.
+
+## **4. Arrays in JavaScript 📋**
 
 An **array** is like a list where you can store multiple values in a single variable.
 
@@ -302,11 +343,77 @@ Or using the `forEach` method:
 fruits.forEach(fruit => console.log(fruit));
 ```
 
-### Why Are Arrays Useful?
-
-- They allow you to **store multiple values** in one place.
+- Array allow you to **store multiple values** in one place.
 - You can **easily access and modify** data.
-- They help **organize data efficiently** for loops and functions.
+- Array help **organize data efficiently** for loops and functions.
+
+## **5. Objects 🏠**
+
+Objects **group related data** together.
+
+```javascript
+let person = {
+    name: "Alice",
+    age: 30,
+    isStudent: false
+};
+```
+
+- Uses **key-value pairs** (like a dictionary).
+- Helps **organize** complex data.
+
+Accessing values:
+
+```javascript
+console.log(person.name); // "Alice"
+```
+
+## **6. Null & Undefined 🚫**
+
+- **`null`**: Intentionally empty value.
+
+  ```javascript
+  let emptyValue = null;
+  ```
+
+- **`undefined`**: A variable declared but **not assigned a value**.
+
+  ```javascript
+  let unknown;
+  console.log(unknown); // undefined
+  ```
+
+## **7. Symbol 🔑**
+
+A **Symbol** is a unique identifier.
+A **Symbol** is a unique identifier.
+
+```javascript
+let uniqueID = Symbol("id");
+console.log(uniqueID);
+```
+
+- Useful for **creating unique keys** in objects.
+
+## **8. BigInt 🔢 (For Extra-Large Numbers)**
+
+Used for **very large** numbers beyond `Number.MAX_SAFE_INTEGER`.
+Used for **very large** numbers beyond `Number.MAX_SAFE_INTEGER`.
+
+```javascript
+let bigNumber = 9007199254740991n;
+```
+
+- Used for **cryptography, financial calculations**, etc.
+
+## **Summary of Data Types 💡**
+
+- JavaScript has **dynamic typing** (you don’t need to define data types explicitly).
+- Strings are for **text**, Numbers are for **math**, Booleans are for **true/false logic**.
+- Arrays store **lists**, and Objects store **grouped data**.
+- `null` and `undefined` **represent missing or unknown values**.
+
+---
 
 ## Operators in JavaScript 🎯
 
@@ -357,16 +464,6 @@ Used to combine multiple conditions.
 console.log(true && false); // false (AND)
 console.log(true || false); // true (OR)
 console.log(!true); // false (NOT)
-```
-
-### **5. Ternary Operator ❓**
-
-A shortcut for writing `if-else` statements.
-
-```javascript
-let age = 18;
-let message = (age >= 18) ? "Adult" : "Minor";
-console.log(message); // "Adult"
 ```
 
 ### **Final Thoughts 💡**
