@@ -471,3 +471,195 @@ console.log(!true); // false (NOT)
 - Operators help manipulate values and control program flow.
 - `===` is **safer** than `==` because it checks **both value and type**.
 - Use logical operators (`&&`, `||`, `!`) to simplify conditions.
+
+## Control Statements in JavaScript 🚀
+
+Control statements in JavaScript help in controlling the flow of execution in a program. They allow us to make decisions, loop over code, and handle different situations efficiently.
+
+---
+
+## **1. Conditional Statements (Decision Making) 🤔**
+
+### **if Statement**
+
+Executes a block of code **only if** the condition is `true`.
+
+```javascript
+let age = 18;
+if (age >= 18) {
+    console.log("You are eligible to vote.");
+}
+```
+
+### **if...else Statement**
+
+Executes one block of code if the condition is `true`, otherwise, another block is executed.
+
+```javascript
+let num = 10;
+if (num % 2 === 0) {
+    console.log("Even number");
+} else {
+    console.log("Odd number");
+}
+```
+
+### **if...else if...else Statement**
+
+Used for multiple conditions.
+
+```javascript
+let marks = 85;
+if (marks >= 90) {
+    console.log("Grade: A");
+} else if (marks >= 75) {
+    console.log("Grade: B");
+} else {
+    console.log("Grade: C");
+}
+```
+
+### **Shortcut: Ternary Operator (?:) 🎯**
+
+A **shorter way** to write `if-else` statements.
+
+```javascript
+let result = (marks >= 75) ? "Passed" : "Failed";
+console.log(result);
+```
+
+- If the condition before `?` is `true`, the first value is returned.
+- If it's `false`, the second value is returned.
+
+### **Switch Statement** 🔄
+
+Used when multiple conditions depend on a single value.
+
+```javascript
+let day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("Start of the week!");
+        break;
+    case "Friday":
+        console.log("Weekend is near!");
+        break;
+    default:
+        console.log("Just another day!");
+}
+```
+
+---
+
+## **2. Looping Statements (Iteration) 🔁**
+
+Loops allow executing a block of code multiple times.
+
+### **for Loop**
+
+Executes a block of code **a fixed number of times**.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+    console.log("Iteration: " + i);
+}
+```
+
+### **while Loop**
+
+Executes a block of code **as long as** the condition is `true`.
+
+```javascript
+let count = 1;
+while (count <= 5) {
+    console.log("Count: " + count);
+    count++;
+}
+```
+
+### **do...while Loop**
+
+Executes the code **at least once**, then repeats while the condition is `true`.
+
+```javascript
+let number = 1;
+do {
+    console.log("Number: " + number);
+    number++;
+} while (number <= 5);
+```
+
+### **for...in Loop**
+
+Used to iterate over **object properties**.
+
+```javascript
+let person = { name: "John", age: 30, city: "New York" };
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+```
+
+### **for...of Loop**
+
+Used to iterate over **iterable objects** (arrays, strings, etc.).
+
+```javascript
+let fruits = ["Apple", "Banana", "Cherry"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+```
+
+---
+
+## **3. Control Flow Statements**
+
+### **break Statement** 🛑
+
+Exits the loop immediately.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        break;
+    }
+    console.log(i);
+}
+// Output: 1, 2
+```
+
+### **continue Statement** 🔄
+
+Skips the current iteration and continues with the next one.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+// Output: 1, 2, 4, 5
+```
+
+### **return Statement** ⏪
+
+Used in functions to return a value and exit the function.
+
+```javascript
+function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 10));
+```
+
+---
+
+## **Conclusion**
+
+- `if-else` and `switch` help make **decisions** in code.
+- `for`, `while`, and `do...while` loops help **repeat** actions.
+- `break` and `continue` **control** the execution of loops.
+- `return` is useful when **exiting functions with a value**.
+- The **ternary operator (`? :`)** is a **shortcut for simple `if-else` conditions**.
